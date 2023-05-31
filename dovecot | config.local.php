@@ -1,38 +1,23 @@
 <?php
-$CONF['configured'] = true;
-
-// Database configuration
+// Paramètres de la base de données
 $CONF['database_type'] = 'mysqli';
 $CONF['database_host'] = 'localhost';
-$CONF['database_user'] = 'postfix';
-$CONF['database_password'] = 'votre_mot_de_passe_mysql';
-$CONF['database_name'] = 'postfixadmin';
+$CONF['database_user'] = 'votre_utilisateur_db';
+$CONF['database_password'] = 'votre_mot_de_passe_db';
+$CONF['database_name'] = 'votre_nom_db';
 
-// Site configuration
-$CONF['default_language'] = 'fr';
-$CONF['default_aliases'] = array (
-  'abuse' => 'postmaster',
-  'hostmaster' => 'postmaster',
-  'postmaster' => 'postmaster',
-  'webmaster' => 'postmaster'
-);
+// Paramètres du serveur de messagerie
+$CONF['configured'] = true;
+$CONF['postfix_admin_url'] = 'http://votre_domaine/postfixadmin';
 $CONF['domain_path'] = 'NO';
-$CONF['domain_in_mailbox'] = 'YES';
-$CONF['domain_in_logo'] = 'YES';
-$CONF['domain_header'] = 'YES';
-$CONF['user_footer_link'] = 'YES';
-$CONF['quota'] = 'YES';
+$CONF['domain_in_mailbox'] = 'NO';
 
-// Virtual mailbox settings
-$CONF['mailbox_postfix_admin'] = 'YES';
-$CONF['domain_quota'] = 'YES';
-$CONF['quota_multiplier'] = '1024000';
+// Paramètres de l'administrateur
+$CONF['admin_email'] = 'admin@votre_domaine';
+$CONF['admin_name'] = 'Nom de l'administrateur';
+$CONF['admin_password'] = 'votre_mot_de_passe_admin';
 
-// Password encryption
-$CONF['encrypt'] = 'md5crypt';
-$CONF['password_validation'] = '/.{5}/';
-
-// Additional configuration options
+// Autres paramètres
 // ...
 
 ?>
